@@ -143,7 +143,7 @@ public class EnergyNet extends Network implements HologramOwner {
         AtomicLong timestamp = new AtomicLong(Slimefun.getProfiler().newEntry());
 
         if (!regulator.equals(b.getLocation())) {
-            updateHologram(b, "&4检测到附近有其他调节器", blockData::isPendingRemove);
+            updateHologram(b, "&4Multiple Energy Regulators connected", blockData::isPendingRemove);
             Slimefun.getProfiler()
                     .closeEntry(b.getLocation(), SlimefunItems.ENERGY_REGULATOR.getItem(), timestamp.get());
             return;
@@ -152,7 +152,7 @@ public class EnergyNet extends Network implements HologramOwner {
         super.tick();
 
         if (connectorNodes.isEmpty() && terminusNodes.isEmpty()) {
-            updateHologram(b, "&4找不到能源网络", blockData::isPendingRemove);
+            updateHologram(b, "&4No Energy Network found", blockData::isPendingRemove);
         } else {
             int supply = tickAllGenerators(timestamp::getAndAdd) + tickAllCapacitors();
             int remainingEnergy = supply;
