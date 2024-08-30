@@ -29,7 +29,7 @@ public final class PostSetup {
     private PostSetup() {}
 
     public static void setupWiki() {
-        Slimefun.logger().log(Level.INFO, "加载 Wiki 页面...");
+        Slimefun.logger().log(Level.INFO, "Loading a Wiki Page...");
 
         WikiUtils.setupJson(Slimefun.instance(), (page) -> page.replace("#", "?id="));
     }
@@ -70,24 +70,24 @@ public final class PostSetup {
                 + " - #########################");
         sender.sendMessage("");
         sender.sendMessage(ChatColor.GREEN
-                + "成功加载了 "
+                + "Successfully loaded "
                 + total
-                + " 个物品和 "
+                + " Items and "
                 + Slimefun.getRegistry().getResearches().size()
-                + " 个研究");
+                + " Researches");
         sender.sendMessage(ChatColor.GREEN
                 + "( "
                 + slimefunOnly
-                + " 物品来自本体, "
+                + " Items from Slimefun, "
                 + (total - slimefunOnly)
-                + " 个物品来自 "
+                + " Items from "
                 + Slimefun.getInstalledAddons().size()
-                + " 扩展 )");
+                + " Addons )");
         sender.sendMessage("");
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + " - 源码:      https://github.com/StarWishsama/Slimefun4");
-        sender.sendMessage(ChatColor.GREEN + " - Bug 反馈:  https://github.com/StarWishsama/Slimefun4/issues");
+        sender.sendMessage(ChatColor.GREEN + " - Source code:   https://github.com/StarWishsama/Slimefun4");
+        sender.sendMessage(ChatColor.GREEN + " - Bug Feedback:  https://github.com/StarWishsama/Slimefun4/issues");
 
         sender.sendMessage("");
 
