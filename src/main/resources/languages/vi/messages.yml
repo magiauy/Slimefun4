@@ -115,6 +115,7 @@ messages:
   give-item: '&bBạn đã gửi đến %player% &a%amount% &7"%item%&7"'
   invalid-research: '&4%research% &ckhông phải là nghiên cứu hợp lệ!'
   give-research: '&bBạn đã cho %player% nghiên cứu &7"%research%&7"'
+  cooldown: '&4 Chậm lại tý bạn ey :3'
   hungry: '&cBạn quá đói để làm vậy!'
   disabled-in-world: '&4&lVật phẩm này đã bị vô hiệu hóa ở thế giới này!'
   disabled-item: '&4&lVật phẩm này đã bị vô hiệu hóa! Sao bạn có thể lấy được vật phẩm đó?'

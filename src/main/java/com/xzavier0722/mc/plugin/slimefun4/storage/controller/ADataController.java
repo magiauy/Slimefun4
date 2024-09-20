@@ -60,12 +60,12 @@ public abstract class ADataController {
             var pendingTask = scheduledWriteTasks.size();
             while (pendingTask > 0) {
                 var doneTaskPercent = String.format("%.1f", (totalTask - pendingTask) / totalTask * 100);
-                logger.log(Level.INFO, "数据保存中，请稍候... 剩余 {0} 个任务 ({1}%)", new Object[] {pendingTask, doneTaskPercent});
+                logger.log(Level.INFO, "Data is being saved, please wait... Remaining {0} tasks ({1}%)", new Object[] {pendingTask, doneTaskPercent});
                 TimeUnit.SECONDS.sleep(1);
                 pendingTask = scheduledWriteTasks.size();
             }
 
-            logger.info("数据保存完成.");
+            logger.info("Data saving complete.");
         } catch (InterruptedException e) {
             logger.log(Level.WARNING, "Exception thrown while saving data: ", e);
         }

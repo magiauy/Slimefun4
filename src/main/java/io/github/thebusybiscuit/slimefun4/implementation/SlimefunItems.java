@@ -3324,8 +3324,9 @@ public final class SlimefunItems {
             Material.LIME_STAINED_GLASS,
             "&aCrafter Smart Port",
             "",
-            "&5Can allocate input quantity based on the number of materials in the recipe",
-            "&5and has a designated output slot");
+            "&fUsed for &2Auto-crafter &f(Cargo)",
+            "&fReplacing vanilla chests, have input",
+            "&fand output slots just like a slimefun machine");
 
     static {
         INFUSED_ELYTRA.addUnsafeEnchantment(Enchantment.MENDING, 1);

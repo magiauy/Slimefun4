@@ -2,11 +2,11 @@
 
 Looking for English (or Original) Version? [**Click here**](https://github.com/Slimefun/Slimefun4/)
 
-想要直接下载吗? [**单击此处**](https://github.com/StarWishsama/Slimefun4/blob/master/README.md#floppy_disk-下载-slimefun4)
+想要直接下载吗? [**单击此处**](https://github.com/SlimefunGuguProject/Slimefun4/blob/master/README.md#floppy_disk-下载-slimefun4)
 
 欢迎加入 QQ 交流群：807302496
 
-下载 [SlimeGlue(粘液胶)](https://github.com/Xzavier0722/SlimeGlue/) 以保证 Slimefun 与领地保护插件的兼容性
+下载 [SlimeGlue(粘液胶)](https://github.com/Xzavier0722/SlimeGlue/) 以保证 Slimefun 与其他保护插件的兼容性
 
 ### 订阅计划
 
@@ -17,10 +17,10 @@ Looking for English (or Original) Version? [**Click here**](https://github.com/S
 
 了解订阅计划：[订阅计划](https://builds.guizhanss.com/sf-subscription)
 
-![目前版本](https://img.shields.io/github/v/release/StarWishSama/Slimefun4?include_prereleases)
-![构建状态](https://builds.guizhanss.com/StarWishsama/Slimefun4/master/badge.svg)
-[![Issues](https://img.shields.io/github/issues/StarWishsama/Slimefun4.svg?style=popout)](https://github.com/StarWishsama/Slimefun4/issues)
-![下载数](https://img.shields.io/github/downloads/StarWishsama/Slimefun4/total)
+![目前版本](https://img.shields.io/github/v/release/SlimefunGuguProject/Slimefun4?include_prereleases)
+![构建状态](https://builds.guizhanss.com/SlimefunGuguProject/Slimefun4/master/badge.svg)
+[![Issues](https://img.shields.io/github/issues/SlimefunGuguProject/Slimefun4.svg?style=popout)](https://github.com/SlimefunGuguProject/Slimefun4/issues)
+![下载数](https://img.shields.io/github/downloads/SlimefunGuguProject/Slimefun4/total)
 
 使用汉化版之后，**禁止**在官方问题追踪器创建新问题!  
 如果你执意要这么做, 请在反馈时使用**官方**开发版并且使用**英语**提交问题。  
@@ -44,7 +44,7 @@ Slimefun 让每个玩家可以自行决定在魔法或科技方面发展。
 
 * **[下载 Slimefun 4](#floppy_disk-下载-slimefun4)**
 * **[Discord 服务器](#discord)**
-* **[Bug 反馈](https://github.com/StarWishsama/Slimefun4/issues)**
+* **[Bug 反馈](https://github.com/SlimefunGuguProject/Slimefun4/issues)**
 * **[官方Wiki](https://github.com/Slimefun/Slimefun4/wiki)**
 * **[非官方中文 Wiki](https://slimefun-wiki.guizhanss.cn/)**
 * **[FAQ](https://slimefun-wiki.guizhanss.cn/FAQ)**
@@ -68,7 +68,7 @@ Slimefun 4 可以在[鬼斩构建站](https://builds.guizhanss.com)页面中**�
 | **Bug 反馈**           | :heavy_check_mark:                                                                 | :x:                                                                                   |
 | **在发布前进行测试**         | :x:                                                                                | :heavy_check_mark:                                                                    |
 | **有无更新日志**           | :x:                                                                                | :memo: **[更新日志(英文)](https://github.com/Slimefun/Slimefun4/blob/master/CHANGELOG.md)** |
-| **下载链接**             | :package: **[下载 最新版](https://builds.guizhanss.com/StarWishsama/Slimefun4/master)** | :package: **[下载 "稳定版"](https://builds.guizhanss.com/StarWishsama/Slimefun4/release)** |
+| **下载链接**             | :package: **[下载 最新版](https://builds.guizhanss.com/SlimefunGuguProject/Slimefun4/master)** | :package: **[下载 "稳定版"](https://builds.guizhanss.com/SlimefunGuguProject/Slimefun4/release)** |
 
 **! 建议你使用最新的测试版，可以获得最新的内容更新和 Bug 修复！**
 
@@ -106,7 +106,7 @@ Slimefun 4 可以在[鬼斩构建站](https://builds.guizhanss.com)页面中**�
 单击下面的徽标加入 Discord 服务器反馈问题和提出意见，或者讨论关于此插件的内容。  
 Slimefun 官方经常会举办一些社区活动，加入我们了解更多。  
 **注意**：Slimefun 官方在 Discord 服务器 **不**
-接受任何形式的问题反馈，请使用 [问题追踪器](https://github.com/StarWishsama/Slimefun4/issues) 反馈问题！
+接受任何形式的问题反馈，请使用 [问题追踪器](https://github.com/SlimefunGuguProject/Slimefun4/issues) 反馈问题！
 
 在加入前请先了解官方 Discord 服务器[重要的规则](https://github.com/Slimefun/Slimefun4/wiki/Discord-Rules)。  
 不遵守以上规则的人可能会被从服务器中踢出甚至封禁。

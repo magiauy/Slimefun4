@@ -1,5 +1,6 @@
 package io.github.thebusybiscuit.slimefun4.implementation.items.magical.staves;
 
+
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemSetting;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -18,6 +19,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.HashSet;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  * The {@link WindStaff} is a powerful staff which launches the {@link Player} forward when right clicked.
  *
@@ -27,6 +32,7 @@ import org.bukkit.inventory.ItemStack;
 public class WindStaff extends SimpleSlimefunItem<ItemUseHandler> {
 
     private final ItemSetting<Integer> multiplier = new IntRangeSetting(this, "power", 1, 4, Integer.MAX_VALUE);
+    private final HashSet<UUID> cooldowns = new HashSet<>();
 
     @ParametersAreNonnullByDefault
     public WindStaff(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -39,7 +45,22 @@ public class WindStaff extends SimpleSlimefunItem<ItemUseHandler> {
     public @Nonnull ItemUseHandler getItemHandler() {
         return e -> {
             Player p = e.getPlayer();
+            AtomicBoolean flag = new AtomicBoolean(false);
+            AtomicBoolean flag2 = new AtomicBoolean(false);
 
+            UUID playerId = p.getUniqueId();
+            p.getEffectivePermissions().forEach(perm -> {
+                if (perm.getPermission().equals("meowvip.sf.cooldownbypass")) {
+                    flag.set(true);
+                }
+                if (perm.getPermission().equals("meowvip.sf.reducecooldown2s")) {
+                    flag2.set(true);
+                }
+            });
+            if (cooldowns.contains(playerId)) {
+                Slimefun.getLocalization().sendMessage(p, "messages.cooldown", true);
+                return;
+            }
             if (p.getFoodLevel() >= 2) {
                 // The isItem() check is here to prevent the MultiTool from consuming hunger
                 if (isItem(e.getItem()) && p.getGameMode() != GameMode.CREATIVE) {
@@ -55,6 +76,17 @@ public class WindStaff extends SimpleSlimefunItem<ItemUseHandler> {
                 SoundEffect.WIND_STAFF_USE_SOUND.playFor(p);
                 p.getWorld().playEffect(p.getLocation(), Effect.SMOKE, 1);
                 p.setFallDistance(0F);
+                if(flag.get()){
+                    return;
+                }else if (flag2.get()) {
+                    cooldowns.add(playerId);
+                    Bukkit.getScheduler().runTaskLater(Slimefun.instance(), () -> cooldowns.remove(playerId), 40);
+                    return;
+                }else{
+                    cooldowns.add(playerId);
+                    Bukkit.getScheduler().runTaskLater(Slimefun.instance(), () -> cooldowns.remove(playerId), 100);
+                    return;
+                }
             } else {
                 Slimefun.getLocalization().sendMessage(p, "messages.hungry", true);
             }

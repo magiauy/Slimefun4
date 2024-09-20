@@ -203,24 +203,6 @@
                     </java>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>com.rudikershaw.gitbuildhook</groupId>
-                <artifactId>git-build-hook-maven-plugin</artifactId>
-                <version>3.5.0</version>
-                <configuration>
-                    <installHooks>
-                        <pre-commit>.git-hooks/pre-commit</pre-commit>
-                    </installHooks>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
 
         <resources>

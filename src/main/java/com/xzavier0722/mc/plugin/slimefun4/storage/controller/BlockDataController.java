@@ -384,7 +384,7 @@ public class BlockDataController extends ADataController {
     public void loadWorld(World world) {
         var start = System.currentTimeMillis();
         var worldName = world.getName();
-        logger.log(Level.INFO, "正在加载世界 {0} 的 Slimefun 方块数据...", worldName);
+        logger.log(Level.INFO, "Loading world {0} of Slimefun Block data...", worldName);
         var chunkKeys = new HashSet<String>();
         var key = new RecordKey(DataScope.CHUNK_DATA);
         key.addField(FieldKey.CHUNK);
@@ -398,7 +398,7 @@ public class BlockDataController extends ADataController {
 
         chunkKeys.forEach(cKey -> loadChunk(LocationUtils.toChunk(world, cKey), false));
         logger.log(
-                Level.INFO, "世界 {0} 数据加载完成, 耗时 {1}ms", new Object[] {worldName, (System.currentTimeMillis() - start)});
+                Level.INFO, "World {0} Data loading completed, time-consuming {1}ms", new Object[] {worldName, (System.currentTimeMillis() - start)});
     }
 
     private void loadChunkData(SlimefunChunkData chunkData) {

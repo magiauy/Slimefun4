@@ -167,6 +167,7 @@ messages:
   give-item: '&bYou have given %player% &a%amount% &7"%item%&7"'
   invalid-research: '&4%research% &cis not a valid Research!'
   give-research: '&bYou have given %player% the Research &7"%research%&7"'
+  cooldown: '&4You have to wait before you can use this again!'
   hungry: '&cYou are too hungry to do that!'
   disabled-in-world: '&4&lThis Item has been disabled in this world'
   disabled-item: '&4&lThis Item has been disabled! How did you even get that?'
